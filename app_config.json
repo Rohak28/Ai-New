@@ -1,0 +1,14 @@
+{
+  "app_name": "Agentic AI IVN Test Report Analyzer",
+  "version": "1.0.0",
+  "frontend": {
+    "port": 6001,
+    "build_dir": "build",
+    "serve_command": "npx serve -s build -l 6001"
+  },
+  "backend": {
+    "port": 8001,
+    "entry_point": "app.py",
+    "serve_command": "uvicorn app:app --host 0.0.0.0 --port 8001"
+  }
+}
