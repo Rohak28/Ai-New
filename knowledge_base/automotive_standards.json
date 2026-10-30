@@ -1,0 +1,103 @@
+{
+  "standards": [
+    {
+      "id": "ISO-11898-2-RISETIME",
+      "standard": "ISO 11898-2:2016 / Project Specification",
+      "category": "Physical Layer - Slew Rate & Timing",
+      "parameter": "Rise Time (tr)",
+      "limit": "Max 200 ns (Pass <= 200 ns; Fails if > 200 ns)",
+      "description": "The differential voltage rise time between 10% and 90% of nominal bus voltage levels must not exceed 200 ns. If rise time goes above 200 ns, the test fails.",
+      "failure_symptoms": [
+        "Rise time measured > 200 ns",
+        "Slow rising transition edge",
+        "Increased effective bit duration due to noise"
+      ],
+      "root_cause_diagnosis": "If Rise Time goes above 200 ns, the test fails. Due to electrical noise and excessive bus capacitance, the transition edge is sluggish and the bit length may increase, causing sample-point misalignment and frame decoding errors.",
+      "recommended_remediation": [
+        "Inspect CAN harness for long branch/stub lines and trim stub lengths to < 0.3 meters.",
+        "Check total bus capacitance and eliminate excessive capacitive loading on CAN_H / CAN_L.",
+        "Verify dual 120-ohm termination resistors at both extreme ends of the bus (total nominal 60 ohms).",
+        "Ensure shielding and twisted-pair routing to prevent noise coupling that stretches bit length."
+      ]
+    },
+    {
+      "id": "ISO-11898-2-FALLTIME",
+      "standard": "ISO 11898-2:2016 / Project Specification",
+      "category": "Physical Layer - Slew Rate & Timing",
+      "parameter": "Fall Time (tf)",
+      "limit": "Max 200 ns (Pass <= 200 ns; Fails if > 200 ns)",
+      "description": "The differential voltage fall time between 90% and 10% of nominal bus voltage levels must not exceed 200 ns. If fall time goes above 200 ns, the test fails.",
+      "failure_symptoms": [
+        "Fall time measured > 200 ns",
+        "Sluggish recessive transition edge",
+        "Bit length expansion due to noise"
+      ],
+      "root_cause_diagnosis": "If Fall Time goes above 200 ns, the test fails. Due to noise and delayed discharge of differential energy, the bit length may increase, delaying edge detection and causing receiver bit timing failures.",
+      "recommended_remediation": [
+        "Verify termination resistor tolerance (120 ohms +/- 1%).",
+        "Inspect common-mode choke saturation on CAN_H / CAN_L lines.",
+        "Check grounding integrity and minimize harness ground offsets to suppress noise.",
+        "Verify transceiver slew-rate control pin configuration."
+      ]
+    },
+    {
+      "id": "ISO-11898-1-BITTIME",
+      "standard": "ISO 11898-1:2015 / Project Specification",
+      "category": "Data Link & Timing - Bit Timing Logic",
+      "parameter": "Bit Rate Tolerance & Bit Time",
+      "limit": "Ideal Condition: 2000 ns; Pass Range: 1998 ns - 2002 ns; Fails if < 1998 ns or > 2002 ns (or 0.00 ns bus-off)",
+      "description": "For 500 kbps CAN communication, ideal bit length is 2000 ns. The strict Pass Condition requires measured bit time to fall within 1998 ns to 2002 ns (+/- 2 ns). Any measurement outside [1998, 2002] ns fails.",
+      "failure_symptoms": [
+        "Bit time measured < 1998 ns or > 2002 ns",
+        "Bit time measured as 0.00 ns (catastrophic bus-off/offline node)",
+        "Diff Bit_Time(ns) reads outside the 1998 - 2002 ns pass band",
+        "Resynchronization failure between DUT and reference node"
+      ],
+      "root_cause_diagnosis": "The DUT failed Bit Rate Tolerance because measured bit time drifted outside the allowable 1998 ns - 2002 ns pass band (ideal: 2000 ns), or entered complete bus-off (0.00 ns). Oscillator frequency drift, improper CAN bit timing register configuration (BRP, TSEG1, TSEG2, SJW), or propagation delay caused bit decoding loss.",
+      "recommended_remediation": [
+        "Measure and calibrate DUT microcontroller crystal oscillator / clock source to ensure tight +/- 0.1% frequency tolerance.",
+        "Tune CAN controller bit timing registers (BRP, TSEG1, TSEG2, SJW) so the nominal bit duration centers precisely on 2000 ns.",
+        "Inspect bus differential resistance (60 ohms +/- 4 ohms) and verify transceiver power rails.",
+        "If bit time reads 0.00 ns, check for physical bus-off state, short circuits, or disconnected node."
+      ]
+    },
+    {
+      "id": "TML-CAN-JITTER-LOAD",
+      "standard": "Tata Motors IVN Specification / Vector CANoe Standard",
+      "category": "Network Traffic & Load Analysis",
+      "parameter": "Message Periodicity & Jitter Tolerance",
+      "limit": "Jitter <= 10% of nominal cycle time; Bus load <= 70% under peak burst",
+      "description": "Cyclic CAN messages must adhere to their configured periodicity in the DBC matrix. Excessive jitter causes transmission delays and message starvation.",
+      "failure_symptoms": [
+        "Jitter % exceeds 10%",
+        "Actual_Periodicity deviates from DBC nominal cycle time",
+        "Bus load exceeds 70% during continuous operation"
+      ],
+      "root_cause_diagnosis": "Arbitration delay caused by higher-priority CAN IDs, task scheduling preemption in ECU AUTOSAR COM stack, or rogue CAN frames not defined in DBC.",
+      "recommended_remediation": [
+        "Audit CAN network for unmapped IDs (e.g. C00000B, 18F0090B) and confirm DBC mapping.",
+        "Optimize ECU transmission task priorities (e.g., ensure cyclic messages run in highest-priority 10ms tasks).",
+        "Implement transmission queuing buffers to prevent burst congestion."
+      ]
+    },
+    {
+      "id": "ISO-11898-2-WAVEFORM-ANOMALIES",
+      "standard": "ISO 11898-2:2016",
+      "category": "Waveform Integrity & Signal Quality",
+      "parameter": "Oscilloscope Waveform Diagnostics",
+      "limit": "Differential voltage Vdiff between 1.5V and 3.0V (Dominant); -0.5V to 0.05V (Recessive)",
+      "description": "Oscilloscope captures show physical signal morphology. Reflections, ringing, or ground shifts degrade bit decoding by the CAN controller.",
+      "failure_symptoms": [
+        "Ringing and oscillations on dominant-to-recessive edges",
+        "DC voltage plateau offsets",
+        "Voltage spikes exceeding transceiver maximum absolute ratings"
+      ],
+      "root_cause_diagnosis": "Impedance mismatch at harness connectors, unshielded cable near high-voltage motor inverter lines, or common ground potential difference.",
+      "recommended_remediation": [
+        "Check impedance continuity across all inline harness bulkheads (should be 120 ohms characteristic impedance).",
+        "Ensure twisted-pair wiring is maintained right up to the ECU connector pins (min 30 twists per meter).",
+        "Verify vehicle chassis ground bonding for all communicating ECU nodes."
+      ]
+    }
+  ]
+}

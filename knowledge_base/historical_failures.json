@@ -1,0 +1,26 @@
+[
+  {
+    "tc_id": "PHL_TC006",
+    "name": "Bit Rate Tolerance",
+    "report_no": "1234",
+    "ecu": "IVN_Test_System",
+    "root_cause": "The DUT failed to remain error-free when its CAN bit rate was offset from the EBS reference, indicating insufficient bit-timing margin or oscillator tolerance. The failure is timing-related rather than a dominant/recessive voltage violation, likely caused by crystal/oscillator drift, incorrect bit timing configuration, or excessive propagation/phase error. The empty numeric result table prevents quantifying the offset, but the verdict and bit-rate test context point to resynchronization loss.",
+    "verified_fix": "1. Re-run PHL_TC006 with explicit +0.5% and -0.5% DUT bit-rate offsets and record error counters, error frames, and bus-off status to identify the failing direction. 2. Verify the DUT CAN oscillator/crystal frequency, load capacitance, and bit timing registers (BRP, TSEG1, TSEG2, SJW) against the nominal bus speed and ISO 11898-2 timing limits. 3. Analyze the 9 oscilloscope traces for sample-point drift, resynchronization phase error, propagation delay, and bus turnaround anomalies that would cause bit decoding errors. 4. Check harness length, termination, grounding, and connector integrity to rule out excessive propagation delay or reflections that reduce timing margin. 5. If oscillator drift or timing margin is confirmed, replace/upgrade the oscillator or adjust bit timing within ISO limits, then retest at nominal and offset bit rates.",
+    "severity": "MEDIUM"
+  },
+  {
+    "tc_id": "PHL_TC_014",
+    "name": "RiseTime and FallTime Measurement",
+    "report_no": "1234",
+    "ecu": "IVN_Test_System",
+    "root_cause": "The failed PHL_TC_014 indicates the DUT's CAN differential transition timing did not satisfy the ISO 11898-2 high-speed CAN rise/fall time limits, most likely because of excessive bus capacitance, long harness stubs, or degraded 120-ohm termination/transceiver output. The blank DUT/EBS result fields mean the measured rise/fall values were not recorded in the report, so the failure should be treated as a physical-layer timing margin issue until the waveform measurements are re-extracted.",
+    "verified_fix": [
+      "1. Re-run PHL_TC_014 with a differential oscilloscope probe on CAN_H/CAN_L at the DUT and EBS, trigger on dominant/recessive transitions, and export the measured rise and fall times to the result table.",
+      "2. Verify total bus capacitance and harness stub lengths; trim any CAN branch or stub longer than 0.3 m for 500 kbps and reduce parallel capacitance.",
+      "3. Check termination: confirm two 120-ohm +/-1% resistors at the bus extremes, measure differential bus impedance near 60 ohms, and verify characteristic impedance near 120 ohms.",
+      "4. Inspect the transceiver output stage, ESD protection diodes, pin capacitance, common-mode choke, and ECU ground offsets; replace a faulty transceiver or ECU if timing remains out of spec.",
+      "5. Validate harness integrity, including twisted-pair continuity, shielding, connector impedance, separation from high-voltage inverter lines, and chassis ground bonding."
+    ],
+    "severity": "MEDIUM"
+  }
+]

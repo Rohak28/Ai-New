@@ -1,0 +1,838 @@
+{
+  "1234": {
+    "metadata": {
+      "report_no": "1234",
+      "project_name": "IVN_Test_System",
+      "dr_stage": "1",
+      "tester": "Sunil Pradhan",
+      "date": "",
+      "ecu_matrix": [
+        {
+          "ecu": "Airbag",
+          "hw_number": "12345",
+          "sw_version": "11"
+        },
+        {
+          "ecu": "Cluster",
+          "hw_number": "54321",
+          "sw_version": "12"
+        },
+        {
+          "ecu": "EPS",
+          "hw_number": "43215",
+          "sw_version": "13"
+        }
+      ],
+      "dbc_file": "IVN_DBC",
+      "tool_details": {},
+      "summary_chart": "/static/reports/IVN_Test_Report(15_57_18)/images/p3_0_444x444.png",
+      "executive_images": [
+        {
+          "image_path": "/static/reports/IVN_Test_Report(15_57_18)/images/p3_0_444x444.png",
+          "width": 444,
+          "height": 444
+        }
+      ]
+    },
+    "test_cases": [
+      {
+        "tc_id": "PHL_TC006",
+        "name": "Bit Rate Tolerance",
+        "verdict": "fail",
+        "measurements": [
+          {
+            "": "",
+            "IVN Test Report": ""
+          },
+          {
+            "": "",
+            "IVN Test Report": ""
+          },
+          {
+            "": "",
+            "IVN Test Report": ""
+          },
+          {
+            "": "",
+            "IVN Test Report": ""
+          },
+          {
+            "": "",
+            "IVN Test Report": ""
+          },
+          {
+            "Overall number of test cases": "Executed test cases",
+            "1": "1",
+            "": "100% of all test cases"
+          },
+          {
+            "Overall number of test cases": "Not executed test cases",
+            "1": "0",
+            "": "0% of all test cases"
+          },
+          {
+            "Overall number of test cases": "Test cases passed",
+            "1": "0",
+            "": "0% of executed test cases"
+          },
+          {
+            "Overall number of test cases": "Test cases failed",
+            "1": "1",
+            "": "100% of executed test cases"
+          },
+          {
+            "Timestamp": "14.197287",
+            "Test Step": "Network Name",
+            "Description": "EV_CAN",
+            "": "",
+            "Result": "-"
+          },
+          {
+            "Timestamp": "24.289287",
+            "Test Step": "",
+            "Description": "Graph",
+            "": "",
+            "Result": "-"
+          },
+          {
+            "Timestamp": "24.289287",
+            "Test Step": "Result Table",
+            "Description": "CAN BIT Time",
+            "": "",
+            "Result": "-"
+          },
+          {
+            "Timestamp": "",
+            "Test Step": "",
+            "Description": "DUT",
+            "": "Result",
+            "Result": ""
+          },
+          {
+            "Timestamp": "",
+            "Test Step": "",
+            "Description": "EBS",
+            "": "fail",
+            "Result": ""
+          },
+          {
+            "": "-",
+            "IVN Test Report": ""
+          },
+          {
+            "": "-",
+            "IVN Test Report": ""
+          },
+          {
+            "": "",
+            "IVN Test Report": ""
+          },
+          {
+            "": "",
+            "IVN Test Report": ""
+          },
+          {
+            "": "-",
+            "IVN Test Report": ""
+          },
+          {
+            "": "-",
+            "IVN Test Report": ""
+          },
+          {
+            "": "",
+            "IVN Test Report": ""
+          },
+          {
+            "": "",
+            "IVN Test Report": ""
+          },
+          {
+            "": "",
+            "IVN Test Report": ""
+          },
+          {
+            "": "",
+            "IVN Test Report": ""
+          },
+          {
+            "": "",
+            "IVN Test Report": ""
+          },
+          {
+            "": "",
+            "IVN Test Report": ""
+          },
+          {
+            "": "-",
+            "IVN Test Report": ""
+          },
+          {
+            "": "-",
+            "IVN Test Report": ""
+          },
+          {
+            "": "",
+            "IVN Test Report": ""
+          },
+          {
+            "": "",
+            "IVN Test Report": ""
+          },
+          {
+            "": "-",
+            "IVN Test Report": ""
+          },
+          {
+            "": "-",
+            "IVN Test Report": ""
+          },
+          {
+            "": "",
+            "IVN Test Report": ""
+          },
+          {
+            "": "",
+            "IVN Test Report": ""
+          },
+          {
+            "": "",
+            "IVN Test Report": ""
+          },
+          {
+            "": "",
+            "IVN Test Report": ""
+          },
+          {
+            "": "",
+            "IVN Test Report": ""
+          },
+          {
+            "": "",
+            "IVN Test Report": ""
+          },
+          {
+            "": "-",
+            "IVN Test Report": ""
+          },
+          {
+            "": "-",
+            "IVN Test Report": ""
+          },
+          {
+            "": "",
+            "IVN Test Report": ""
+          },
+          {
+            "": "",
+            "IVN Test Report": ""
+          },
+          {
+            "": "-",
+            "IVN Test Report": ""
+          },
+          {
+            "": "-",
+            "IVN Test Report": ""
+          },
+          {
+            "": "",
+            "IVN Test Report": ""
+          },
+          {
+            "": "",
+            "IVN Test Report": ""
+          },
+          {
+            "": "",
+            "IVN Test Report": ""
+          },
+          {
+            "": "",
+            "IVN Test Report": ""
+          },
+          {
+            "": "",
+            "IVN Test Report": ""
+          },
+          {
+            "": "",
+            "IVN Test Report": ""
+          },
+          {
+            "": "-",
+            "IVN Test Report": ""
+          },
+          {
+            "": "-",
+            "IVN Test Report": ""
+          },
+          {
+            "": "",
+            "IVN Test Report": ""
+          },
+          {
+            "": "",
+            "IVN Test Report": ""
+          },
+          {
+            "": "-",
+            "IVN Test Report": ""
+          },
+          {
+            "": "-",
+            "IVN Test Report": ""
+          },
+          {
+            "": "",
+            "IVN Test Report": ""
+          },
+          {
+            "": "",
+            "IVN Test Report": ""
+          },
+          {
+            "": "fail",
+            "IVN Test Report": ""
+          },
+          {
+            "": "",
+            "IVN Test Report": ""
+          },
+          {
+            "": "",
+            "IVN Test Report": ""
+          },
+          {
+            "": "",
+            "IVN Test Report": ""
+          },
+          {
+            "": "",
+            "IVN Test Report": ""
+          }
+        ],
+        "images": [
+          {
+            "image_path": "/static/reports/IVN_Test_Report(15_57_18)/images/p4_0_1717x717.png",
+            "width": 1717,
+            "height": 717
+          },
+          {
+            "image_path": "/static/reports/IVN_Test_Report(15_57_18)/images/p5_0_1717x717.png",
+            "width": 1717,
+            "height": 717
+          },
+          {
+            "image_path": "/static/reports/IVN_Test_Report(15_57_18)/images/p5_1_1717x717.png",
+            "width": 1717,
+            "height": 717
+          },
+          {
+            "image_path": "/static/reports/IVN_Test_Report(15_57_18)/images/p6_0_1717x717.png",
+            "width": 1717,
+            "height": 717
+          },
+          {
+            "image_path": "/static/reports/IVN_Test_Report(15_57_18)/images/p6_1_1717x717.png",
+            "width": 1717,
+            "height": 717
+          },
+          {
+            "image_path": "/static/reports/IVN_Test_Report(15_57_18)/images/p7_0_1717x717.png",
+            "width": 1717,
+            "height": 717
+          },
+          {
+            "image_path": "/static/reports/IVN_Test_Report(15_57_18)/images/p7_1_1717x717.png",
+            "width": 1717,
+            "height": 717
+          },
+          {
+            "image_path": "/static/reports/IVN_Test_Report(15_57_18)/images/p8_0_1717x717.png",
+            "width": 1717,
+            "height": 717
+          },
+          {
+            "image_path": "/static/reports/IVN_Test_Report(15_57_18)/images/p8_1_1717x717.png",
+            "width": 1717,
+            "height": 717
+          }
+        ],
+        "ai_analysis": {
+          "root_cause": "The DUT failed bit-rate tolerance because its CAN bit time or phase margin could not remain synchronized with the EBS reference when the DUT bit rate was offset, causing bit decoding errors or bus-off. The empty numeric result table prevents quantifying the exact bit-time deviation, but the failure is consistent with oscillator/crystal tolerance, incorrect BRP/TSEG1/TSEG2/SJW configuration, or excessive propagation/phase error. The nine oscilloscope traces should be reviewed for sample-point drift, resynchronization phase error, and bus turnaround anomalies.",
+          "iso_reference": "ISO 11898-1:2015 Clause 9 (Physical layer), Bit Rate Tolerance / Bit Time; project pass band 1998 ns to 2002 ns for 500 kbps",
+          "severity": "MEDIUM",
+          "recommended_fix": "1. Re-run PHL_TC006 with explicit +0.5% and -0.5% DUT bit-rate offsets and capture error counters, error frames, and bus-off status to identify the failing direction. 2. Verify the DUT CAN oscillator/crystal frequency, load capacitance, and bit timing registers (BRP, TSEG1, TSEG2, SJW) against the nominal 500 kbps bit time and ISO 11898-1 timing limits. 3. Analyze the nine oscilloscope traces for sample-point drift, resynchronization phase error, propagation delay, reflections, and bus turnaround anomalies. 4. Check harness length, 120 ohm termination, twisted-pair integrity, grounding, and connector integrity to rule out excessive propagation delay or reflections. 5. If oscillator drift or timing margin is confirmed, replace/upgrade the oscillator or adjust bit timing within ISO limits, then retest at nominal and offset bit rates."
+        }
+      },
+      {
+        "tc_id": "PHL_TC_014",
+        "name": "RiseTime and FallTime Measurement",
+        "verdict": "fail",
+        "measurements": [
+          {
+            "": "",
+            "IVN Test Report": ""
+          },
+          {
+            "": "",
+            "IVN Test Report": ""
+          },
+          {
+            "": "",
+            "IVN Test Report": ""
+          },
+          {
+            "": "",
+            "IVN Test Report": ""
+          },
+          {
+            "": "",
+            "IVN Test Report": ""
+          },
+          {
+            "Overall number of test cases": "Executed test cases",
+            "1": "1",
+            "": "100% of all test cases"
+          },
+          {
+            "Overall number of test cases": "Not executed test cases",
+            "1": "0",
+            "": "0% of all test cases"
+          },
+          {
+            "Overall number of test cases": "Test cases passed",
+            "1": "0",
+            "": "0% of executed test cases"
+          },
+          {
+            "Overall number of test cases": "Test cases failed",
+            "1": "1",
+            "": "100% of executed test cases"
+          },
+          {
+            "Timestamp": "36.092977",
+            "Test Step": "Network Name",
+            "Description": "EV_CAN",
+            "": "",
+            "Result": "-"
+          },
+          {
+            "Timestamp": "55.335977",
+            "Test Step": "",
+            "Description": "Graph",
+            "": "",
+            "Result": "-"
+          },
+          {
+            "Timestamp": "55.335977",
+            "Test Step": "Result Table",
+            "Description": "CAN Rise Time",
+            "": "",
+            "Result": "-"
+          },
+          {
+            "Timestamp": "",
+            "Test Step": "",
+            "Description": "DUT",
+            "": "Result",
+            "Result": ""
+          },
+          {
+            "Timestamp": "",
+            "Test Step": "",
+            "Description": "EBS",
+            "": "pass",
+            "Result": ""
+          },
+          {
+            "Timestamp": "55.335977",
+            "Test Step": "Result Table",
+            "Description": "CAN Fall Time",
+            "": "",
+            "Result": "-"
+          },
+          {
+            "Timestamp": "",
+            "Test Step": "",
+            "Description": "DUT",
+            "": "Result",
+            "Result": ""
+          },
+          {
+            "Timestamp": "",
+            "Test Step": "",
+            "Description": "EBS",
+            "": "pass",
+            "Result": ""
+          },
+          {
+            "": "-",
+            "IVN Test Report": ""
+          },
+          {
+            "": "-",
+            "IVN Test Report": ""
+          },
+          {
+            "": "",
+            "IVN Test Report": ""
+          },
+          {
+            "": "",
+            "IVN Test Report": ""
+          },
+          {
+            "": "-",
+            "IVN Test Report": ""
+          },
+          {
+            "": "",
+            "IVN Test Report": ""
+          },
+          {
+            "": "",
+            "IVN Test Report": ""
+          },
+          {
+            "": "-",
+            "IVN Test Report": ""
+          },
+          {
+            "": "-",
+            "IVN Test Report": ""
+          },
+          {
+            "": "",
+            "IVN Test Report": ""
+          },
+          {
+            "": "",
+            "IVN Test Report": ""
+          },
+          {
+            "": "-",
+            "IVN Test Report": ""
+          },
+          {
+            "": "",
+            "IVN Test Report": ""
+          },
+          {
+            "": "",
+            "IVN Test Report": ""
+          },
+          {
+            "": "",
+            "IVN Test Report": ""
+          },
+          {
+            "": "",
+            "IVN Test Report": ""
+          },
+          {
+            "": "",
+            "IVN Test Report": ""
+          },
+          {
+            "": "",
+            "IVN Test Report": ""
+          },
+          {
+            "": "-",
+            "IVN Test Report": ""
+          },
+          {
+            "": "-",
+            "IVN Test Report": ""
+          },
+          {
+            "": "",
+            "IVN Test Report": ""
+          },
+          {
+            "": "",
+            "IVN Test Report": ""
+          },
+          {
+            "": "-",
+            "IVN Test Report": ""
+          },
+          {
+            "": "",
+            "IVN Test Report": ""
+          },
+          {
+            "": "",
+            "IVN Test Report": ""
+          },
+          {
+            "": "-",
+            "IVN Test Report": ""
+          },
+          {
+            "": "-",
+            "IVN Test Report": ""
+          },
+          {
+            "": "",
+            "IVN Test Report": ""
+          },
+          {
+            "": "",
+            "IVN Test Report": ""
+          },
+          {
+            "": "-",
+            "IVN Test Report": ""
+          },
+          {
+            "": "",
+            "IVN Test Report": ""
+          },
+          {
+            "": "",
+            "IVN Test Report": ""
+          },
+          {
+            "": "",
+            "IVN Test Report": ""
+          },
+          {
+            "": "",
+            "IVN Test Report": ""
+          },
+          {
+            "": "",
+            "IVN Test Report": ""
+          },
+          {
+            "": "",
+            "IVN Test Report": ""
+          },
+          {
+            "": "-",
+            "IVN Test Report": ""
+          },
+          {
+            "": "-",
+            "IVN Test Report": ""
+          },
+          {
+            "": "",
+            "IVN Test Report": ""
+          },
+          {
+            "": "",
+            "IVN Test Report": ""
+          },
+          {
+            "": "-",
+            "IVN Test Report": ""
+          },
+          {
+            "": "",
+            "IVN Test Report": ""
+          },
+          {
+            "": "",
+            "IVN Test Report": ""
+          },
+          {
+            "": "-",
+            "IVN Test Report": ""
+          },
+          {
+            "": "-",
+            "IVN Test Report": ""
+          },
+          {
+            "": "",
+            "IVN Test Report": ""
+          },
+          {
+            "": "",
+            "IVN Test Report": ""
+          },
+          {
+            "": "-",
+            "IVN Test Report": ""
+          },
+          {
+            "": "",
+            "IVN Test Report": ""
+          },
+          {
+            "": "",
+            "IVN Test Report": ""
+          },
+          {
+            "": "",
+            "IVN Test Report": ""
+          },
+          {
+            "": "",
+            "IVN Test Report": ""
+          },
+          {
+            "": "",
+            "IVN Test Report": ""
+          },
+          {
+            "": "",
+            "IVN Test Report": ""
+          },
+          {
+            "": "-",
+            "IVN Test Report": ""
+          },
+          {
+            "": "-",
+            "IVN Test Report": ""
+          },
+          {
+            "": "",
+            "IVN Test Report": ""
+          },
+          {
+            "": "",
+            "IVN Test Report": ""
+          },
+          {
+            "": "-",
+            "IVN Test Report": ""
+          },
+          {
+            "": "",
+            "IVN Test Report": ""
+          },
+          {
+            "": "",
+            "IVN Test Report": ""
+          },
+          {
+            "": "-",
+            "IVN Test Report": ""
+          },
+          {
+            "": "-",
+            "IVN Test Report": ""
+          },
+          {
+            "": "",
+            "IVN Test Report": ""
+          },
+          {
+            "": "",
+            "IVN Test Report": ""
+          },
+          {
+            "": "-",
+            "IVN Test Report": ""
+          },
+          {
+            "": "",
+            "IVN Test Report": ""
+          },
+          {
+            "": "",
+            "IVN Test Report": ""
+          },
+          {
+            "": "fail",
+            "IVN Test Report": ""
+          },
+          {
+            "": "",
+            "IVN Test Report": ""
+          },
+          {
+            "": "",
+            "IVN Test Report": ""
+          },
+          {
+            "": "",
+            "IVN Test Report": ""
+          },
+          {
+            "": "",
+            "IVN Test Report": ""
+          }
+        ],
+        "images": [
+          {
+            "image_path": "/static/reports/IVN_Test_Report(15_57_18)/images/p9_0_1717x717.png",
+            "width": 1717,
+            "height": 717
+          },
+          {
+            "image_path": "/static/reports/IVN_Test_Report(15_57_18)/images/p10_0_1717x717.png",
+            "width": 1717,
+            "height": 717
+          },
+          {
+            "image_path": "/static/reports/IVN_Test_Report(15_57_18)/images/p10_1_1717x717.png",
+            "width": 1717,
+            "height": 717
+          },
+          {
+            "image_path": "/static/reports/IVN_Test_Report(15_57_18)/images/p11_0_1717x717.png",
+            "width": 1717,
+            "height": 717
+          },
+          {
+            "image_path": "/static/reports/IVN_Test_Report(15_57_18)/images/p11_1_1717x717.png",
+            "width": 1717,
+            "height": 717
+          },
+          {
+            "image_path": "/static/reports/IVN_Test_Report(15_57_18)/images/p12_0_1717x717.png",
+            "width": 1717,
+            "height": 717
+          },
+          {
+            "image_path": "/static/reports/IVN_Test_Report(15_57_18)/images/p12_1_1717x717.png",
+            "width": 1717,
+            "height": 717
+          },
+          {
+            "image_path": "/static/reports/IVN_Test_Report(15_57_18)/images/p13_0_1717x717.png",
+            "width": 1717,
+            "height": 717
+          },
+          {
+            "image_path": "/static/reports/IVN_Test_Report(15_57_18)/images/p13_1_1717x717.png",
+            "width": 1717,
+            "height": 717
+          }
+        ],
+        "ai_analysis": {
+          "root_cause": "The PHL_TC_014 failure indicates the DUT/EBS CAN differential transition timing did not meet the ISO 11898-2 200 ns rise/fall time limit, although the result table did not capture numeric DUT/EBS values. This is typically caused by excessive bus capacitance, long stubs, improper 120-ohm termination, or transceiver slew-rate/noise issues that slow the dominant/recessive edge.",
+          "iso_reference": "ISO 11898-2:2016, Clause 9.2.2 (Rise time tr and fall time tf; max 200 ns)",
+          "severity": "HIGH",
+          "recommended_fix": "1. Re-extract rise and fall times from the 9 captured oscilloscope traces using a differential probe on CAN_H/CAN_L at the DUT and EBS, trigger on dominant/recessive transitions, and populate the result table with measured ns values. 2. Verify bus topology by trimming CAN stubs to less than 0.3 m and reducing total bus capacitance from parallel loads, ESD devices, and connector pins. 3. Verify termination by confirming two 120-ohm +/-1% resistors at the bus extremes, measuring approximately 60-ohm differential bus impedance, and checking characteristic impedance near 120 ohms. 4. Inspect the transceiver output stage, slew-rate control pin configuration, common-mode choke, ESD protection, and ECU ground offsets; replace a faulty transceiver or ECU if timing remains out of spec. 5. Validate harness integrity, including twisted-pair continuity, shielding, connector impedance, separation from high-voltage inverter lines, and chassis ground bonding, then re-run PHL_TC_014."
+        }
+      },
+      {
+        "tc_id": "CL_TC_006_Jitter_offline",
+        "name": "Unknown Test Name",
+        "verdict": "pass",
+        "measurements": [],
+        "images": [],
+        "ai_analysis": {
+          "status": "PASS",
+          "message": "Test passed \u2014 no AI analysis needed."
+        }
+      }
+    ],
+    "analysis_summary": {
+      "total_test_cases": 3,
+      "passed": 1,
+      "failed": 2,
+      "ai_analyzed": 2,
+      "analysis_time_seconds": 223.83,
+      "model_used": "neuroverse-Qwen/Qwen3.6-27B"
+    }
+  }
+}
